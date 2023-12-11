@@ -7,6 +7,8 @@
 
 # 配置
 
+目录`/app/app.py`是启动脚本。
+
 目录`/app/conf/my_condig.py`是基本配置：
 ``` python
 Config = {
@@ -46,7 +48,7 @@ docker run -d \
 --restart unless-stopped \
 --name manage_pad \
 -p 46415:9040 \
-xpcheng/etherpad_py_front:latest
+<你的名称>/manage_etherpad
 ```
 
 可以提前将配置文件挂载，docker run时设置挂载位置（这样启动后不会报错说找不到文件）
