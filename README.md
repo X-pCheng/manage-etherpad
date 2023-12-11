@@ -3,7 +3,7 @@
 
 这个管理页面没有权限的概念，支持管理的Etherpad也仅仅为独立pad，并不涉及到组和用户，所以主要为单用户（管理员）使用
 
-支持的功有登录、查询、新建、删除、编辑
+支持的功有登录、登出、查询、新建、编辑、删除
 
 # 配置
 
@@ -24,4 +24,32 @@ Config = {
     # 管理程序使用的端口
     'web_port': 9040
 }
+```
+
+# Docker打包
+
+进入Dockerfile所在目录，执行
+
+``` dockerfile
+docker build --rm --tag <你的名称>/manage_etherpad .
+```
+
+查看镜像
+
+``` dockerfile
+docker images
+```
+
+启动容器
+``` dockerfile
+docker run -d \
+--restart unless-stopped \
+--name manage_pad \
+-p 46415:9040 \
+xpcheng/etherpad_py_front:latest
+```
+
+可以提前将配置文件挂载，docker run时设置挂载位置（这样启动后不会报错说找不到文件）
+``` dockerfile
+-v /share/Container/manage_pad/conf:/app/conf \
 ```
