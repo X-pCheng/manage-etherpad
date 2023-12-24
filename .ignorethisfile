@@ -1,0 +1,4 @@
+ignorethisfile.txt
+ignorethisfolder/
+.git
+*cache*

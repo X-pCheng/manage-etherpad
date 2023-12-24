@@ -1,5 +1,2 @@
 etherpad-lite==0.5
-Flask==3.0.0
-jaraco.functools==4.0.0
-Jinja2==3.1.2
-Werkzeug==3.0.1
+flask==3.0.0
