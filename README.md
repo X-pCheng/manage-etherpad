@@ -1,5 +1,5 @@
 # manage-etherpad
-这是一个基于flask、bootstrap（UI登录页）、layui（管理页面）整合的Etherpad前台管理页面，并可打包成Docker镜像
+一个基于flask、bootstrap（UI登录页）、layui（管理页面）整合的Etherpad前台管理页面，并可打包成Docker镜像
 
 这个管理页面没有权限的概念，支持管理的Etherpad也仅仅为独立pad，并不涉及到组和用户，所以主要为单用户（管理员）使用
 
@@ -13,7 +13,7 @@
 ``` python
 Config = {
     # Etherpad的Web访问地址
-    'web_url': 'http://xxx:9000',
+    'web_url': 'http://localhost:9000',
     # 要使用的api版本
     'api_version': '1.3.0',
     # Etherpad的APIKEY
