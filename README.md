@@ -45,7 +45,7 @@ docker images
 启动容器
 ``` dockerfile
 docker run -d \
---restart unless-stopped \
+--restart always \
 --name manage_pad \
 -p 46415:9040 \
 <你的名称>/manage_etherpad
@@ -53,5 +53,5 @@ docker run -d \
 
 可以提前将配置文件挂载，docker run时设置挂载位置（这样启动后不会报错说找不到文件）
 ``` dockerfile
--v /share/Container/manage_pad/conf:/app/conf \
+-v ~/manage_pad/conf:/app/conf \
 ```
